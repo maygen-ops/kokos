@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Сколько нужно встреч с психологом? — Александра Кокосьян</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: #f7f5f1;
+      color: #2f3a37;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(820px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247,245,241,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding: 18px 0;
+    }
+
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #4f6f67;
+      letter-spacing: 0.02em;
+    }
+
+    .back-links {
+      display: flex;
+      gap: 20px;
+      font-size: 0.95rem;
+      color: #52615c;
+    }
+
+    .back-links a {
+      transition: 0.2s ease;
+    }
+
+    .back-links a:hover {
+      color: #7c9d92;
+    }
+
+    article {
+      padding: 70px 0 90px;
+    }
+
+    article h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 34px;
+      color: #2f3a37;
+    }
+
+    article p {
+      margin-bottom: 20px;
+      color: #3d4a45;
+      font-size: 1.08rem;
+    }
+
+    article h2 {
+      font-size: 1.6rem;
+      margin: 50px 0 20px;
+      color: #2f3a37;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      color: #5d6d67;
+      margin-bottom: 30px;
+    }
+
+    .format-block {
+      background: white;
+      border-radius: 24px;
+      padding: 30px 32px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+    }
+
+    .format-block h3 {
+      font-size: 1.25rem;
+      color: #31403b;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .format-block h3::before {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #7c9d92;
+      flex-shrink: 0;
+    }
+
+    .format-block p {
+      margin-bottom: 14px;
+      font-size: 1.02rem;
+    }
+
+    .format-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .quote {
+      background: #eef3ef;
+      border-left: 4px solid #7c9d92;
+      border-radius: 16px;
+      padding: 26px 30px;
+      margin: 40px 0;
+      font-size: 1.1rem;
+      color: #3d4a45;
+      font-style: italic;
+    }
+
+    .reasons-list {
+      list-style: none;
+      margin: 20px 0 30px;
+    }
+
+    .reasons-list li {
+      position: relative;
+      padding: 14px 0 14px 32px;
+      color: #3d4a45;
+      font-size: 1.05rem;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .reasons-list li:last-child {
+      border-bottom: none;
+    }
+
+    .reasons-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 24px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #7c9d92;
+    }
+
+    .conclusion {
+      background: #dbe7e1;
+      border-radius: 24px;
+      padding: 32px;
+      margin-top: 40px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #2f3a37;
+    }
+
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      font-size: 0.98rem;
+    }
+
+    .btn-primary {
+      background: #7c9d92;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #6d8d83;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(0,0,0,0.08);
+      background: white;
+      color: #4d5c57;
+    }
+
+    .btn-secondary:hover {
+      background: #f0ece6;
+    }
+
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: #6b7a75;
+      font-size: 0.92rem;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+
+    @media (max-width: 768px) {
+      article {
+        padding: 50px 0 70px;
+      }
+
+      article h1 {
+        font-size: 28px;
+      }
+
+      article p,
+      .format-block p,
+      .reasons-list li {
+        font-size: 17px;
+      }
+
+      .format-block {
+        padding: 24px;
+      }
+
+      .quote {
+        padding: 22px;
+        font-size: 1rem;
+      }
+
+      .back-links {
+        gap: 14px;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-top">
+    <a href="../index.html" class="logo">Александра Кокосьян</a>
+
+    <nav class="back-links">
+      <a href="../index.html">← На главную</a>
+      <a href="../articles.html">Все статьи</a>
+    </nav>
+  </div>
+</header>
+
+<article>
+  <div class="container">
+
+    <h1>Сколько нужно встреч с психологом?</h1>
+
+    <p class="lead">
+      Вопрос «сколько нужно встреч с психологом?» — один из самых популярных.
+      И это понятно: деньги, время, силы — всё это ресурсы, которые хочется тратить осознанно.
+    </p>
+
+    <p>
+      Честный ответ: <strong>зависит от того, что вы хотите</strong>.
+      Давайте расскажу подробнее.
+    </p>
+
+    <h2>Три формата работы</h2>
+
+    <div class="format-block">
+      <h3>Одна консультация</h3>
+      <p>
+        Если вы хотите разобраться в том, что происходит, понять, где искать причины,
+        в какую сторону идти и наметить план действий — обычно хватает одной консультации.
+        Реже может понадобиться две.
+      </p>
+      <p>
+        Часто такая консультация хорошо снимает чрезмерное напряжение. Это позволяет
+        перестать тратить силы на сдерживание и терпение и направить их на решение вопроса.
+        Поэтому многим хватает одной встречи, чтобы почувствовать себя лучше и что-то изменить в своей жизни.
+      </p>
+    </div>
+
+    <div class="format-block">
+      <h3>От 5 до 10 встреч</h3>
+      <p>
+        В среднем этого хватает, чтобы проработать какой-то один конкретный запрос.
+        Или, если запрос совсем глобальный, — научиться устойчиво двигаться в сторону изменений.
+        Это «концентрированная» помощь.
+      </p>
+      <p>
+        Стоит понимать, что сам запрос вы можете и не осознавать — его можно прояснить уже на первой консультации.
+      </p>
+    </div>
+
+    <div class="format-block">
+      <h3>Долгий формат (больше 10–15 встреч)</h3>
+      <p>
+        Хорошо подходит для того, чтобы кардинально изменить себя в разных сферах.
+        При таком варианте психологической работы изменения получаются более плавными и глобальными,
+        а откаты сглаживаются.
+      </p>
+      <p>
+        Такой способ изменений ещё и более ресурсный. Он позволяет тратить меньше сил в процессе
+        и даёт возможность себя подпитывать по ходу.
+      </p>
+    </div>
+
+    <div class="quote">
+      Длительную терапию можно сравнить с долгими занятиями спортом:
+      совсем другое качество себя, совсем другое самочувствие, совсем другой образ жизни.
+    </div>
+
+    <h2>Но есть нюансы</h2>
+
+    <p>
+      Конечно, такая градация очень усреднённая. Продолжая аналогию со спортом:
+      состояние «психологических мышц» у всех разное, как и особенности здоровья.
+    </p>
+
+    <ul class="reasons-list">
+      <li>Кто-то может посетить одно занятие и дальше развиваться самостоятельно.</li>
+      <li>Кому-то мешают травмы детства — и их нужно бережно проработать.</li>
+      <li>У кого-то есть желание, но большое внутреннее сопротивление мешает — значит, результаты будут скромнее или потребуется больше времени.</li>
+    </ul>
+
+    <div class="conclusion">
+      Могу сказать с уверенностью: если вы готовы меняться — результат будет.
+    </div>
+
+    <div class="article-footer">
+      <a href="../index.html#contacts" class="btn btn-primary">Записаться на консультацию</a>
+      <a href="../articles.html" class="btn btn-secondary">Все статьи</a>
+    </div>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    © 2026 Психолог Александра Кокосьян
+  </div>
+</footer>
+
+</body>
+</html>
