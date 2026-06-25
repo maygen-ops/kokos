@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Путь дороже цели — Александра Кокосьян</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: #f7f5f1;
+      color: #2f3a37;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(820px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247,245,241,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding: 18px 0;
+    }
+
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #4f6f67;
+      letter-spacing: 0.02em;
+    }
+
+    .back-links {
+      display: flex;
+      gap: 20px;
+      font-size: 0.95rem;
+      color: #52615c;
+    }
+
+    .back-links a {
+      transition: 0.2s ease;
+    }
+
+    .back-links a:hover {
+      color: #7c9d92;
+    }
+
+    article {
+      padding: 70px 0 90px;
+    }
+
+    article h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 34px;
+      color: #2f3a37;
+    }
+
+    article p {
+      margin-bottom: 20px;
+      color: #3d4a45;
+      font-size: 1.08rem;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      color: #5d6d67;
+      margin-bottom: 30px;
+    }
+
+    .quote {
+      background: #eef3ef;
+      border-left: 4px solid #7c9d92;
+      border-radius: 16px;
+      padding: 26px 30px;
+      margin: 40px 0;
+      font-size: 1.1rem;
+      color: #3d4a45;
+      font-style: italic;
+    }
+
+    .conclusion {
+      background: #dbe7e1;
+      border-radius: 24px;
+      padding: 32px;
+      margin-top: 40px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #2f3a37;
+    }
+
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      font-size: 0.98rem;
+    }
+
+    .btn-primary {
+      background: #7c9d92;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #6d8d83;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(0,0,0,0.08);
+      background: white;
+      color: #4d5c57;
+    }
+
+    .btn-secondary:hover {
+      background: #f0ece6;
+    }
+
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: #6b7a75;
+      font-size: 0.92rem;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+
+    @media (max-width: 768px) {
+      article {
+        padding: 50px 0 70px;
+      }
+
+      article h1 {
+        font-size: 28px;
+      }
+
+      article p {
+        font-size: 17px;
+      }
+
+      .quote {
+        padding: 22px;
+        font-size: 1rem;
+      }
+
+      .conclusion {
+        padding: 24px;
+        font-size: 1.05rem;
+      }
+
+      .back-links {
+        gap: 14px;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-top">
+    <a href="../index.html" class="logo">Александра Кокосьян</a>
+
+    <nav class="back-links">
+      <a href="../index.html">← На главную</a>
+      <a href="../articles.html">Все статьи</a>
+    </nav>
+  </div>
+</header>
+
+<article>
+  <div class="container">
+
+    <h1>Путь дороже цели</h1>
+
+    <p class="lead">
+      Со мной многие не согласятся, ведь хочется не идти к заработку, замужеству или счастью. А получить их. И так заманчивы «телепортационные» обещания: получить сразу.
+    </p>
+
+    <p>
+      Правда в том, что путь даёт те качества, изменения и время на изменения, чтобы стать соответствующим желаемому, готовит к тому, чего хочется. И на этой дороге мы и обретаем лучшую версию себя, да и вообще учимся быть.
+    </p>
+
+    <p>
+      «Получить сразу» обязывает потом учиться соответствовать этому желаемому качеству, навязывает долженствование «теперь надо удержать».
+    </p>
+
+    <div class="quote">
+      Когда идёшь постепенно, в своем ритме, то не пропустишь ничего важного. Каждое обретение внутреннее или внешнее будет ценным, замеченным и займет свое предназначенное место. К желаемому ты придёшь наполненный изобилием, среди которого цель станет органичной частью, а не сверхценностью.
+    </div>
+
+    <p>
+      Путь и есть смысл. Время проведенное в пути — лучший подарок.
+    </p>
+
+    <div class="conclusion">
+      Телепортация хороша, когда она ставит тебя на путь.<br>
+      И да, путь редко бывает прямым, но всегда даёт тебе нужных людей.
+    </div>
+
+    <div class="article-footer">
+      <a href="../index.html#contacts" class="btn btn-primary">Записаться на консультацию</a>
+      <a href="../articles.html" class="btn btn-secondary">Все статьи</a>
+    </div>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    © 2026 Психолог Александра Кокосьян
+  </div>
+</footer>
+
+</body>
+</html>
