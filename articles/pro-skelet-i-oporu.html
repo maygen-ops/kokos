@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Про скелет и опору — Александра Кокосьян</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: #f7f5f1;
+      color: #2f3a37;
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(820px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247,245,241,0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding: 18px 0;
+    }
+
+    .nav-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #4f6f67;
+      letter-spacing: 0.02em;
+    }
+
+    .back-links {
+      display: flex;
+      gap: 20px;
+      font-size: 0.95rem;
+      color: #52615c;
+    }
+
+    .back-links a {
+      transition: 0.2s ease;
+    }
+
+    .back-links a:hover {
+      color: #7c9d92;
+    }
+
+    article {
+      padding: 70px 0 90px;
+    }
+
+    article h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 34px;
+      color: #2f3a37;
+    }
+
+    article p {
+      margin-bottom: 20px;
+      color: #3d4a45;
+      font-size: 1.08rem;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      color: #5d6d67;
+      margin-bottom: 30px;
+    }
+
+    .quote {
+      background: #eef3ef;
+      border-left: 4px solid #7c9d92;
+      border-radius: 16px;
+      padding: 26px 30px;
+      margin: 40px 0;
+      font-size: 1.1rem;
+      color: #3d4a45;
+      font-style: italic;
+    }
+
+    .conclusion {
+      background: #dbe7e1;
+      border-radius: 24px;
+      padding: 32px;
+      margin-top: 40px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #2f3a37;
+    }
+
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(0,0,0,0.08);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      font-size: 0.98rem;
+    }
+
+    .btn-primary {
+      background: #7c9d92;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #6d8d83;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(0,0,0,0.08);
+      background: white;
+      color: #4d5c57;
+    }
+
+    .btn-secondary:hover {
+      background: #f0ece6;
+    }
+
+    footer {
+      padding: 40px 0;
+      text-align: center;
+      color: #6b7a75;
+      font-size: 0.92rem;
+      border-top: 1px solid rgba(0,0,0,0.06);
+    }
+
+    @media (max-width: 768px) {
+      article {
+        padding: 50px 0 70px;
+      }
+
+      article h1 {
+        font-size: 28px;
+      }
+
+      article p {
+        font-size: 17px;
+      }
+
+      .quote {
+        padding: 22px;
+        font-size: 1rem;
+      }
+
+      .conclusion {
+        padding: 24px;
+        font-size: 1.05rem;
+      }
+
+      .back-links {
+        gap: 14px;
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-top">
+    <a href="../index.html" class="logo">Александра Кокосьян</a>
+
+    <nav class="back-links">
+      <a href="../index.html">← На главную</a>
+      <a href="../articles.html">Все статьи</a>
+    </nav>
+  </div>
+</header>
+
+<article>
+  <div class="container">
+
+    <h1>Про скелет и опору</h1>
+
+    <p class="lead">
+      Скелет — это то, что служит организму опорой. То, благодаря чему получается иметь форму, а не растекаться куском желе.
+    </p>
+
+    <p>
+      У жуков, моллюсков и т.п. скелет — это прочная внешняя оболочка, к которой крепится мягкое содержимое. Такой экзоскелет будет прочной броней и привычным домом для своего носителя.
+      По мере роста существа, его панцирь становится ему мал и приходится либо доращивать его, либо менять.
+    </p>
+
+    <p>
+      У нас, у людей скелет — это внутренний каркас, на который «надето» всё остальное. Он растёт вместе с нами, становится более крепким или хрупким от наших усилий. И создавая опору внутри, позволяет внешним слоям нашего организма быть более чувствительными и восприимчивыми.
+    </p>
+
+    <p>
+      И вот появляется очень интересное сравнение.
+      Когда жизнь заставляет нас вырастить крепкую психологическую броню, которая защищает от боли, обиды, негатива, то мы становимся этакими метафорическими моллюсками.
+    </p>
+
+    <p>
+      Снаружи у такого человека крепкий панцирь, который защищает от всего вообще, потому что не пропускает не только плохое, но и всё хорошее тоже. Да и просто любые ощущения тоже не пропускает.
+      А внутри у него как правило, всё мягкое, нежное и безвольное, потому что все силы уходят на поддержание брони.
+    </p>
+
+    <p>
+      И живёт такой человек довольно несчастливо, потому что разница между внутренним и внешним всё время держит его в сильном напряжении.
+      Все ощущения, впечатления, эмоции в его мире очень ослаблены или вообще отсутствуют. Головой понимает, что должен радоваться, а не может, защитный панцирь не пропускает.
+      Кстати, это один из первых признаков, что вы живёте в психологических доспехах.
+    </p>
+
+    <p>
+      В природе все, кто имеет внешний скелет, вынуждены линять или наращивать его всю жизнь, а человек в таком психологическом коконе останавливается в своем развитии и росте, как бы застывает в своих представлениях.
+      И не может потом отказаться от устаревших нежизнеспособных мыслей, потому что это означает необходимость остаться без брони. А она приросла, отдирать больно, да и выстоять без нее не получится.
+    </p>
+
+    <p>
+      Надо ли говорить, что когда другие люди видят или ощущают человека в броне, то их первая неосознаваемая мысль — он опасен!
+      Ход мыслей примерно такой: «зачем он надел броню? — ему страшно, опасно, он ждёт нападения. Значит рядом с ним опасно, значит он опасен. Может даже готов напасть в ответ или напасть на того, кто рядом».
+      Это очень быстрые неосознаваемые даже не мысли, а ощущения, завязанные на глубинной биологии.
+    </p>
+
+    <p>
+      Получается, человек в психологической броне воспринимается другими как носитель агрессии.
+      И первая подсознательная реакция на такого человека: ударь — убеги — спрячься от него.
+      Получается очень печальный замкнутый круг. Тот, кто надел крепкие психологические доспехи для защиты себя от боли и негатива, будет встречаться с такой реакцией в первую очередь. И она будет усиливать броню.
+    </p>
+
+    <div class="quote">
+      Отпустить броню бывает страшновато. Без доспехов чувствуешь себя голым.
+    </div>
+
+    <p>
+      Вот тут самое время вспомнить, что опора и каркас у людей внутри. А защитным и чувствительным слоем служит кожа. И перенести эту аналогию на психику.
+    </p>
+
+    <p>
+      Нужно понять, что из твоих ценностей может служить тебе опорой. Какие мысли и убеждения тебя поддерживают, а какие ограничивают.
+      Где те мысли, чувства и состояния, которые создают твой внутренний стержень, твое желание быть?
+    </p>
+
+    <p>
+      Как правило, когда мы укрепляем себя внутри, перестаем быть ранимыми и беззащитными, ценность внешнего панциря для нашего мозга падает, он перестает за него цепляться и тратить силы на его поддержание.
+      При этом наша жизненная чувствительность возрастает, а защита переходит к тем процессам, которые можно назвать «психологической кожей».
+      Уровень внутреннего стресса и напряжения падает и даже дышится свободней.
+    </p>
+
+    <p>
+      Это очень постепенный процесс внутренних изменений, который не случается одномоментно.
+    </p>
+
+    <div class="conclusion">
+      Результатом будут эмоции и ощущения в полную силу. Вкусная жизнь и яркие чувства в то же время.
+    </div>
+
+    <div class="article-footer">
+      <a href="../index.html#contacts" class="btn btn-primary">Записаться на консультацию</a>
+      <a href="../articles.html" class="btn btn-secondary">Все статьи</a>
+    </div>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    © 2026 Психолог Александра Кокосьян
+  </div>
+</footer>
+
+</body>
+</html>
